@@ -72,8 +72,8 @@ pipeline {
             sh ''' 
             /kaniko/executor --dockerfile=Dockerfile \
                              --context=`pwd` \
-                             --destination=robinhoodis/ubuntu:`cat VERSION` \
-                             --destination=robinhoodis/ubuntu:latest \
+                             --destination=robinhoodis/mlt:`cat VERSION` \
+                             --destination=robinhoodis/mlt:latest \
                              --cache=true
             '''
           }
