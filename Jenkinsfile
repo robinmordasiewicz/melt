@@ -62,7 +62,7 @@ pipeline {
         beforeAgent true
         expression {
           container('ubuntu') {
-            sh(returnStatus: true, script: 'skopeo inspect docker://docker.io/robinhoodis/ubuntu:`cat VERSION`') == 1
+            sh(returnStatus: true, script: 'skopeo inspect docker://docker.io/robinhoodis/mlt:`cat VERSION`') == 1
           }
         }
       }
