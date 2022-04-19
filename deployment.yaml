@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mlt
+  labels:
+    app: mlt
+spec:
+  containers:
+  - image: robinhoodis/mlt:latest
+    command:
+      - "sleep"
+      - "604800"
+    imagePullPolicy: Always
+    name: mlt
+  restartPolicy: Always
