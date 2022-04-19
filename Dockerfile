@@ -24,7 +24,6 @@ RUN wget --quiet -O /tmp/build-melt.sh https://raw.githubusercontent.com/mltfram
   echo "FFMPEG_REVISION=origin/release/5.0" >> /tmp/build-melt.conf && \
   bash /tmp/build-melt.sh -c /tmp/build-melt.conf
 
-
 FROM base
 
 # Install packages for running
