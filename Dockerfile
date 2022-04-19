@@ -53,6 +53,9 @@ ENV LD_LIBRARY_PATH /usr/local/lib
 # Qt, Movit, and WebVfx require xvfb-run, which requires a PID 1 init provided by dumb-init
 ENTRYPOINT ["/usr/bin/dumb-init", "--", "/usr/bin/xvfb-run", "-a", "/usr/local/bin/melt"]
 
+RUN apt-get install -y python3-pip
+RUN pip install gTTS
+
 RUN groupadd -g 1000 ubuntu
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g 1000 -G sudo -u 1000 ubuntu
 RUN touch /home/ubuntu/.sudo_as_admin_successful
