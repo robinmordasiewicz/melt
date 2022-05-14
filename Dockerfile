@@ -3,7 +3,7 @@ FROM ubuntu:20.04 AS base
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /tmp
 
-RUN apt-get update -qq && apt-get install -yqq apt-utils
+RUN apt-get update -qq && apt-get install -yqq apt-utils ubuntu-restricted-extras
 
 FROM base AS build
 
