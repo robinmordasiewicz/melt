@@ -51,7 +51,8 @@ WORKDIR /mnt
 ENV LD_LIBRARY_PATH /usr/local/lib
 
 # Qt, Movit, and WebVfx require xvfb-run, which requires a PID 1 init provided by dumb-init
-ENTRYPOINT ["/usr/bin/dumb-init", "--", "/usr/bin/xvfb-run", "-a", "/usr/local/bin/melt"]
+#ENTRYPOINT ["/usr/bin/dumb-init", "--", "/usr/bin/xvfb-run", "-a", "/usr/local/bin/melt"]
+ENTRYPOINT ["/usr/bin/dumb-init", "--", "/usr/bin/xvfb-run", "-a", "./mlt.sh"]
 
 RUN apt-get install -y python3-pip
 RUN pip install gTTS
