@@ -11,5 +11,6 @@ RUN useradd -rm -d /home/ubuntu -s /bin/bash -g 1000 -G sudo -u 1000 ubuntu
 RUN touch /home/ubuntu/.sudo_as_admin_successful
 RUN touch /home/ubuntu/.hushlogin
 USER ubuntu:ubuntu
+ENV XDG_RUNTIME_DIR=/home/ubuntu/
 
 #CMD ./mlt.sh
