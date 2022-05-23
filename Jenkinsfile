@@ -62,7 +62,7 @@ pipeline {
         beforeAgent true
         expression {
           container('ubuntu') {
-            sh(returnStatus: true, script: 'skopeo inspect docker://docker.io/robinhoodis/mlt:`cat VERSION`') == 1
+            sh(returnStatus: true, script: 'skopeo inspect docker://docker.io/robinhoodis/melt:`cat VERSION`') == 1
           }
         }
       }
@@ -72,8 +72,8 @@ pipeline {
             sh ''' 
             /kaniko/executor --dockerfile=Dockerfile \
                              --context=`pwd` \
-                             --destination=robinhoodis/mlt:`cat VERSION` \
-                             --destination=robinhoodis/mlt:latest \
+                             --destination=robinhoodis/melt:`cat VERSION` \
+                             --destination=robinhoodis/melt:latest \
                              --cache=true
             '''
           }

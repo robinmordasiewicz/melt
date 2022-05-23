@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 
-echo "deploy mlt container"
+echo "deploy melt container"
 
 kubectl apply -f deployment.yaml --namespace r-mordasiewicz
 
-echo "kubectl exec --namespace r-mordasiewicz -it mlt -c mlt -- /bin/bash"
+echo "kubectl exec --namespace r-mordasiewicz -it melt -c melt -- /bin/bash"
