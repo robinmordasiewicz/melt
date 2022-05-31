@@ -6,7 +6,7 @@ metadata:
     app: melt
 spec:
   containers:
-  - image: robinhoodis/melt:latest
+  - image: robinhoodis/melt:0.2.3
     command:
       - "sleep"
       - "604800"
