@@ -5,12 +5,13 @@ FROM mltframework/melt:latest
 
 #RUN apt-get install -y python3-pip
 #RUN pip install gTTS
-
+ENTRYPOINT ["/bin/bash"]
 RUN groupadd -g 1000 ubuntu
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g 1000 -G sudo -u 1000 ubuntu
 RUN touch /home/ubuntu/.sudo_as_admin_successful
 RUN touch /home/ubuntu/.hushlogin
 USER ubuntu:ubuntu
 ENV XDG_RUNTIME_DIR=/home/ubuntu/
+WORKDIR /home/ubuntu
 
 #CMD ./mlt.sh
